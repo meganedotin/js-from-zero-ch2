@@ -1,0 +1,25 @@
+{
+  "name": "js-from-zero-ch2",
+  "version": "1.0.0",
+  "description": "Ch2 非同期お天気webアプリを作る!",
+  "private": true,
+  "scripts": {
+    "start": "npm run watch & npm run server",
+    "build": "rollup -c",
+    "watch": "chokidar 'src/**' -c 'npm run build'",
+    "server": "browser-sync start --files 'dist/*, index.html' --server"
+  },
+  "dependencies": {
+    "riot": "^3.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "chokidar-cli": "^1.2.0",
+    "rollup": "^0.36.4",
+    "rollup-plugin-buble": "^0.14.0",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-riot": "^1.0.0"
+  },
+  "license": "MIT"
+}
