@@ -5,7 +5,7 @@ import buble from 'rollup-plugin-buble'
 
 export default {
   entry: 'src/main.js',
-  dest: 'dist/bundle.js',
+  dest: 'dist/main.js',
   plugins: [
     riot(),
     nodeResolve({ jsnext: true }),

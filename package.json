@@ -4,10 +4,11 @@
   "description": "Ch2 非同期お天気webアプリを作る!",
   "private": true,
   "scripts": {
-    "start": "npm run watch & npm run server",
-    "build": "rollup -c",
+    "start": "npm run build; npm run watch & npm run server",
+    "build": "npm run rsync && rollup -c",
+    "rsync": "rsync -avu --exclude '*.tag' --exclude '*.js' src/ dist/",
     "watch": "chokidar 'src/**' -c 'npm run build'",
-    "server": "browser-sync start --files 'dist/*, index.html' --server"
+    "server": "browser-sync start --files 'dist/*' --server dist/"
   },
   "dependencies": {
     "riot": "^3.0.1"

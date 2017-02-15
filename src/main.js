@@ -1,6 +1,6 @@
 import 'whatwg-fetch'
 import riot from 'riot'
 import './app.tag'
-import './app-weather.tag'
+import './weather.tag'
 
 riot.mount('app')
