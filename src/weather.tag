@@ -13,7 +13,7 @@
     const appid = opts.apikey
     const url = `${apiBase}?q=${opts.city}&APPID=${appid}&units=metric`
     this.on('mount', () => {
-      fetch(url)
+      window.fetch(url)
         .then(response => response.json())
         .then(data => {
           this.update({
